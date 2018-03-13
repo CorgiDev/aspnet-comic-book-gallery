@@ -11,7 +11,7 @@ namespace ComicBookGalleryModel.Models
     {
         public ComicBook()
         {
-            Artists = new List<Artist>();
+            Artists = new List<ComicBookArtist>();
         }
 
         //Alternative Primary Key names = ID, ClassNameId, or ClassNameID. Pick one format and be consistent.
@@ -25,7 +25,7 @@ namespace ComicBookGalleryModel.Models
         public DateTime PublishedOn { get; set; }
         public decimal? AverageRating { get; set; }
 
-        public ICollection<Artist> Artists { get; set; }
+        public ICollection<ComicBookArtist> Artists { get; set; }
 
         public string DisplayText
         {
@@ -33,6 +33,15 @@ namespace ComicBookGalleryModel.Models
             {
                 return $"{Series?.Title} # {IssueNumber}";
             }
+        }
+
+        public void AddArtist(Artist artist, Role role)
+        {
+            Artists.Add(new ComicBookArtist()
+            {
+                Artist = artist,
+                Role = role
+            });
         }
     }
 }
