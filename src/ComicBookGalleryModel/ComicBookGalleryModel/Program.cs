@@ -86,17 +86,19 @@ namespace ComicBookGalleryModel
                 //Rest of code
                 var comicBooks = context.ComicBooks
                     .Include(cb => cb.Series)
-                    .Include(cb => cb.Artists)
+                    .Include(cb => cb.Artists.Select(a => a.Artist))
+                    .Include(cb => cb.Artists.Select(a => a.Role))
                     .ToList();
 
                 foreach (var comicBook in comicBooks)
                 {
-                    var artistNames = comicBook.Artists.Select(a => a.Name).ToList();
+                    var artistRoleNames = comicBook.Artists
+                        .Select(a => $"{a.Artist.Name} - {a.Role.Name}").ToList();
 
-                    var artistsDisplayText = string.Join(", ", artistNames);
+                    var artistRolesDisplayText = string.Join(", ", artistRoleNames);
 
                     Console.WriteLine(comicBook.DisplayText);
-                    Console.WriteLine(artistsDisplayText);
+                    Console.WriteLine(artistRolesDisplayText);
                 }
 
                 Console.ReadLine();
