@@ -18,7 +18,7 @@ namespace ComicBookGalleryModel.Models
         public int Id { get; set; }
         public int SeriesRefId { get; set; }
 
-        [ForeignKey("SeriesRefId")]
+        //[ForeignKey("SeriesRefId")]
         public Series Series { get; set; }
         public int IssueNumber { get; set; }
         public string Description { get; set; }

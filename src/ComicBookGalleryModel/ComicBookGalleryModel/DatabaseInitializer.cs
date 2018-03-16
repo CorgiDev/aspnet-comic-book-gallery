@@ -18,13 +18,11 @@ namespace ComicBookGalleryModel
                 Title = "The Amazing Spider-Man",
                 Description = "The Amazing Spider-Man (abbreviated as ASM) is an American comic book series published by Marvel Comics, featuring the adventures of the fictional superhero Spider-Man. Being the mainstream continuity of the franchise, it began publication in 1963 as a monthly periodical and was published continuously, with a brief interruption in 1995, until its relaunch with a new numbering order in 1999. In 2003 the series reverted to the numbering order of the first volume. The title has occasionally been published biweekly, and was published three times a month from 2008 to 2010. A film named after the comic was released July 3, 2012."
             };
-
             var seriesIronMan = new Series()
             {
                 Title = "The Invincible Iron Man",
                 Description = "Iron Man (Tony Stark) is a fictional superhero appearing in American comic books published by Marvel Comics, as well as its associated media. The character was created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. He made his first appearance in Tales of Suspense #39 (cover dated March 1963)."
             };
-
             var seriesBone = new Series()
             {
                 Title = "Bone",
@@ -36,27 +34,22 @@ namespace ComicBookGalleryModel
             {
                 Name = "Stan Lee"
             };
-
             var artistSteveDitko = new Artist()
             {
                 Name = "Steve Ditko"
             };
-
             var artistArchieGoodwin = new Artist()
             {
                 Name = "Archie Goodwin"
             };
-
             var artistGeneColan = new Artist()
             {
                 Name = "Gene Colan"
             };
-
             var artistJohnnyCraig = new Artist()
             {
                 Name = "Johnny Craig"
             };
-
             var artistJeffSmith = new Artist()
             {
                 Name = "Jeff Smith"
@@ -68,11 +61,11 @@ namespace ComicBookGalleryModel
             {
                 Name = "Script"
             };
-
             var rolePencils = new Role()
             {
                 Name = "Pencils"
             };
+
 
             //Individual Comic Books
             var comicBook1 = new ComicBook()
